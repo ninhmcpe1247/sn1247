@@ -86,13 +86,13 @@ const animationTimeline = () => {
         .to(".idea-5 span", 0.7, { rotation: 90, x: 8 }, "+=1.4")
         .to(".idea-5", 0.7, { scale: 0.2, opacity: 0 }, "+=2")
         .staggerFrom(".idea-6 span", 0.8, {
-            scale: 3,
+            scale: 1,
             opacity: 0,
             rotation: 15,
             ease: Expo.easeOut,
         }, 0.2)
         .staggerTo(".idea-6 span", 0.8, {
-            scale: 3,
+            scale: 1,
             opacity: 0,
             rotation: -15,
             ease: Expo.easeOut,
@@ -176,10 +176,11 @@ const animationTimeline = () => {
             repeat: 3,
             repeatDelay: 1.4,
         }, 0.3, "party")
-
+        .to({}, {}, "+=5")
         .to(".six", 0.5, { opacity: 0, y: 30, zIndex: "-1" })
+        
         .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
-        .to(".last-smile", 0.5, { rotation: 90 }, "+=2");
+        .to(".last-smile", 0.5, { rotation: 90 }, "+=1");
 
     // Restart Animation on click
     const replyBtn = document.getElementById("replay");

@@ -42,14 +42,14 @@ body::before {
     justify-content: center;
     margin-top: 10px;
     gap: 10px; /* khoảng cách giữa ảnh */
-    transform: translateY(-50px);
+    transform: translateY(-40px);
 }
 
 .cake-group img.hat {
     width: 120px; /* kích thước bánh */
     height: auto;
     z-index: 1;
-    transform: translateY(-46px);
+    transform: translateY(-40px);
 }
 
 
@@ -142,7 +142,7 @@ body::before {
 }
 
 .idea-6 span{
-  font-size: 4rem;
+  font-size: 4rem !important;
 }
 
 .six {
@@ -161,7 +161,7 @@ body::before {
 } */
  .six img.profile-picture {
   display: block;
-  height: 400px;        
+  height: 360px;        
    max-width: 90%;       
   border-radius: 15px;   /* bo góc nhẹ cho đẹp (tuỳ chọn) */
  /* // object-fit: cover;     ảnh không méo khi to ra */
