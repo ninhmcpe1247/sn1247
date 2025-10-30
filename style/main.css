@@ -49,7 +49,7 @@ body::before {
     width: 120px; /* kích thước bánh */
     height: auto;
     z-index: 1;
-    transform: translateY(-55px);
+    transform: translateY(-46px);
 }
 
 
