@@ -2,13 +2,65 @@ html {
   box-sizing: border-box;
 }
 
+/* body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+} */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  background: none;
+}
+
+/* Nền ảnh động/tĩnh */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/cc.jpg"); /* đường dẫn chuẩn */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2; /* nằm dưới tất cả hiệu ứng khác */
+  opacity: 1; /* giảm số này nếu muốn mờ hơn */
 }
 
 .song {
   visibility: hidden;
+}
+.cake-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px; /* khoảng cách giữa ảnh */
+    transform: translateY(-50px);
+}
+
+.cake-group img.hat {
+    width: 120px; /* kích thước bánh */
+    height: auto;
+    z-index: 1;
+    transform: translateY(-55px);
+}
+
+
+.left-img {
+    transform: translateX(-10px); /* dịch nhẹ sang trái (tùy chỉnh) */
+    border-radius: 5px; 
+}
+
+.right-img {
+    transform: translateX(10px); /* dịch nhẹ sang phải (tùy chỉnh) */
+    border-radius: 5px; 
 }
 
 .container {
@@ -102,10 +154,24 @@ body {
   align-items: center; 
 }
 
-.six img {
+/* .six img {
   display: inline-block;
   height: 250px;
   max-width: 80%;
+} */
+ .six img.profile-picture {
+  display: block;
+  height: 400px;        
+   max-width: 90%;       
+  border-radius: 15px;   /* bo góc nhẹ cho đẹp (tuỳ chọn) */
+ /* // object-fit: cover;     ảnh không méo khi to ra */
+  /* margin-bottom: 5px;   tạo khoảng cách với phần bánh */
+  /* transform: translateY(-90px); đẩy ảnh lên cao hơn */
+}
+.six {
+  position: relative;
+  top: 0;            /* reset lại nếu trước đó bị đẩy xuống */
+  margin-top: -60px; /* kéo toàn bộ cụm six lên trên */
 }
 
 .six .hat {
@@ -113,8 +179,23 @@ body {
   height: 100%;
 }
 
-.wishText{
+/* .wishText{
   font-size: 4rem;
+  transform: translateY(-30px);
+} */
+.wish {
+  margin-top: -55px; /* kéo chữ lên gần bánh */
+}
+
+.wish-hbd {
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.wishText {
+  font-size: 2rem;
+  margin: 5px 0 0;
 }
 
 .baloons img {
@@ -291,3 +372,4 @@ body {
     font-weight: lighter;
   }
 }
+
